@@ -20,8 +20,8 @@
                             heading: '#f0f6fc',
                             accent: '#2f81f7',
                             hover: '#1f6feb',
-                            lightBg: '#f6f8fa',
-                            lightCard: '#ffffff',
+                            lightBg: '#ffffff',
+                            lightCard: '#f6f8fa',
                             lightBorder: '#d0d7de',
                             lightText: '#1f2328',
                             lightHeading: '#0f172a'
@@ -39,7 +39,7 @@
     <!-- Google Fonts Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -51,18 +51,17 @@
             font-weight: 600;
         }
         .glass-card {
-            backdrop-filter: blur(8px);
+            backdrop-filter: blur(12px);
         }
     </style>
 </head>
 <body class="bg-gh-bg text-gh-text dark:bg-gh-bg dark:text-gh-text bg-gh-lightBg text-gh-lightText min-h-screen flex flex-col justify-between selection:bg-blue-500 selection:text-white">
 
-    <!-- Navbar / Header -->
-    <header class="sticky top-0 z-50 border-b border-gh-border dark:border-gh-border border-gh-lightBorder bg-gh-bg/80 dark:bg-gh-bg/80 bg-gh-lightBg/80 glass-card">
+    <header class="sticky top-0 z-50 border-b border-gh-border dark:border-gh-border border-gh-lightBorder bg-gh-bg/85 dark:bg-gh-bg/85 bg-gh-lightBg/85 glass-card">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
             <div class="flex items-center space-x-3">
-                <div class="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center text-white font-bold text-lg shadow-sm">
-                    <i class="fa-solid font-mono text-sm">VS</i>
+                <div class="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center text-white font-bold text-sm shadow-sm">
+                    VS
                 </div>
                 <span class="font-semibold text-lg text-gh-heading dark:text-gh-heading text-gh-lightHeading tracking-tight">CapturaDocs</span>
             </div>
@@ -80,39 +79,58 @@
         </div>
     </header>
 
-    <!-- Main Content -->
-    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex-grow w-full">
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-grow w-full">
         
-        <!-- Hero Section -->
-        <section class="text-center max-w-3xl mx-auto mb-16">
-            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-xs font-medium mb-6">
+        <!-- Hero Section with Collaborators prominently featured -->
+        <section class="text-center max-w-4xl mx-auto mb-16">
+            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-xs font-medium mb-8">
                 <span class="flex h-2 w-2 rounded-full bg-blue-500 animate-pulse"></span>
-                <span>Comparativa de Herramientas de Captura</span>
+                <span>Informe Técnico & Comparativa</span>
             </div>
-            <h1 class="text-4xl sm:text-5xl font-extrabold text-gh-heading dark:text-gh-heading text-gh-lightHeading tracking-tight mb-4">
+
+            <!-- Collaborators Display -->
+            <div class="mb-10 p-6 sm:p-8 rounded-2xl border border-gh-border dark:border-gh-border border-gh-lightBorder bg-gh-card dark:bg-gh-card bg-gh-lightCard shadow-sm">
+                <p class="text-xs uppercase tracking-widest font-semibold text-gray-400 mb-4">Autores & Colaboradores</p>
+                <div class="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8">
+                    <div class="flex items-center space-x-2">
+                        <i class="fa-solid fa-circle-user text-blue-500 text-xl"></i>
+                        <span class="text-xl sm:text-2xl font-extrabold text-gh-heading dark:text-gh-heading text-gh-lightHeading tracking-tight">Alfredo Rivadulla</span>
+                    </div>
+                    <span class="hidden md:inline text-gray-600 dark:text-gray-600 font-light">•</span>
+                    <div class="flex items-center space-x-2">
+                        <i class="fa-solid fa-circle-user text-blue-500 text-xl"></i>
+                        <span class="text-xl sm:text-2xl font-extrabold text-gh-heading dark:text-gh-heading text-gh-lightHeading tracking-tight">Iker Ronda</span>
+                    </div>
+                    <span class="hidden md:inline text-gray-600 dark:text-gray-600 font-light">•</span>
+                    <div class="flex items-center space-x-2">
+                        <i class="fa-solid fa-circle-user text-blue-500 text-xl"></i>
+                        <span class="text-xl sm:text-2xl font-extrabold text-gh-heading dark:text-gh-heading text-gh-lightHeading tracking-tight">Rodrigo Acosta</span>
+                    </div>
+                </div>
+            </div>
+
+            <h1 class="text-4xl sm:text-6xl font-black text-gh-heading dark:text-gh-heading text-gh-lightHeading tracking-tight mb-4">
                 ShareX <span class="text-gray-500 font-light">vs</span> Recortes
             </h1>
-            <p class="text-base sm:text-lg text-gray-400 leading-relaxed mb-8">
-                Análisis exhaustivo entre la potente suite de código abierto y la solución nativa minimalistade Microsoft Windows. Descubre cuál se adapta mejor a tu flujo de trabajo.
+            <p class="text-base sm:text-lg text-gray-400 leading-relaxed mb-8 max-w-2xl mx-auto">
+                Análisis comparativo exhaustivo entre la suite de automatización de código abierto ShareX y la herramienta nativa Herramienta Recortes de Microsoft.
             </p>
 
             <!-- Navigation Tabs -->
-            <div class="flex justify-center border-b border-gh-border dark:border-gh-border border-gh-lightBorder space-x-8">
-                <button onclick="switchTab('resumen')" id="tab-resumen" class="tab-btn active py-3 px-1 border-b-2 border-transparent text-sm font-medium transition-all">
-                    <i class="fa-solid fa-layer-group mr-2"></i>Vista General
+            <div class="flex justify-center border-b border-gh-border dark:border-gh-border border-gh-lightBorder space-x-4 sm:space-x-8">
+                <button onclick="switchTab('resumen')" id="tab-resumen" class="tab-btn active py-3 px-2 border-b-2 border-transparent text-sm font-medium transition-all">
+                    <i class="fa-solid fa-layer-group mr-2"></i>Visión General
                 </button>
-                <button onclick="switchTab('tabla')" id="tab-tabla" class="tab-btn py-3 px-1 border-b-2 border-transparent text-sm font-medium text-gray-400 hover:text-gray-200 transition-all">
+                <button onclick="switchTab('tabla')" id="tab-tabla" class="tab-btn py-3 px-2 border-b-2 border-transparent text-sm font-medium text-gray-400 hover:text-gray-200 transition-all">
                     <i class="fa-solid fa-table-list mr-2"></i>Tabla Comparativa
                 </button>
-                <button onclick="switchTab('proscons')" id="tab-proscons" class="tab-btn py-3 px-1 border-b-2 border-transparent text-sm font-medium text-gray-400 hover:text-gray-200 transition-all">
+                <button onclick="switchTab('proscons')" id="tab-proscons" class="tab-btn py-3 px-2 border-b-2 border-transparent text-sm font-medium text-gray-400 hover:text-gray-200 transition-all">
                     <i class="fa-solid fa-scale-balanced mr-2"></i>Pros y Contras
                 </button>
             </div>
         </section>
 
-        <!-- TAB CONTENT: RESUMEN -->
         <div id="content-resumen" class="tab-content space-y-12">
-            <!-- Cards Overview Grid -->
             <div class="grid md:grid-cols-2 gap-8">
                 <!-- ShareX Card -->
                 <div class="rounded-xl border border-gh-border dark:border-gh-border border-gh-lightBorder bg-gh-card dark:bg-gh-card bg-gh-lightCard p-6 sm:p-8 flex flex-col justify-between shadow-sm hover:border-blue-500/50 transition-all">
@@ -125,42 +143,41 @@
                             <i class="fa-solid fa-bolt text-blue-500 mr-3 text-xl"></i> ShareX
                         </h2>
                         <p class="text-sm text-gray-400 leading-relaxed mb-6">
-                            Una navaja suiza automatizada. Diseñada para usuarios avanzados, desarrolladores y creadores de contenido que requieren workflows rápidos y herramientas completas de edición y subida a la nube.
+                            Una potente herramienta multitarea orientada a desarrolladores y power users. Sobresale por sus capacidades de automatización, captura en desplazamiento y sincronización inmediata con la nube.
                         </p>
                     </div>
                     <ul class="space-y-3 text-sm text-gray-300 dark:text-gray-300 text-gray-700 border-t border-gh-border dark:border-gh-border border-gh-lightBorder pt-4">
-                        <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-2 text-xs"></i> Captura de desplazamiento (Scrolling)</li>
-                        <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-2 text-xs"></i> Subida automática a nubes (Imgur, Drive, FTP)</li>
-                        <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-2 text-xs"></i> Grabación en GIF y MP4</li>
-                        <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-2 text-xs"></i> Herramientas de pixelado y OCR avanzado</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-2 text-xs"></i> Captura de desplazamiento (Scroll capture)</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-2 text-xs"></i> Subida automática a Imgur, Drive, FTP, etc.</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-2 text-xs"></i> Grabación de pantalla (GIF y MP4)</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-2 text-xs"></i> OCR avanzado, pixelado y marcas de agua</li>
                     </ul>
                 </div>
 
                 <!-- Windows Snipping Tool Card -->
-                <div class="rounded-xl border border-gh-border dark:border-gh-border border-gh-lightBorder bg-gh-card dark:bg-gh-card bg-gh-lightCard p-6 sm:p-8 flex flex-col justify-between shadow-sm hover:border-blue-500/50 transition-all">
+                <div class="rounded-xl border border-gh-border dark:border-gh-border border-gh-lightBorder bg-gh-card dark:bg-gh-card bg-gh-lightCard p-6 sm:p-8 flex flex-col justify-between shadow-sm hover:border-purple-500/50 transition-all">
                     <div>
                         <div class="flex items-center justify-between mb-4">
                             <span class="text-xs font-mono px-2.5 py-1 rounded bg-purple-500/10 text-purple-400 border border-purple-500/20">Nativo Windows</span>
                             <span class="text-xs text-gray-400">Preinstalado</span>
                         </div>
                         <h2 class="text-2xl font-bold text-gh-heading dark:text-gh-heading text-gh-lightHeading mb-2 flex items-center">
-                            <i class="fa-solid fa-scissors text-purple-500 mr-3 text-xl"></i> Recortes de Microsoft
+                            <i class="fa-solid fa-scissors text-purple-500 mr-3 text-xl"></i> Herramienta Recortes
                         </h2>
                         <p class="text-sm text-gray-400 leading-relaxed mb-6">
-                            La herramienta por defecto e intuitiva de Windows. Excelente para tareas cotidianas, recortes inmediatos y anotaciones simples sin sobrecargar al usuario con menús complejos.
+                            La aplicación oficial integrada en Windows. Destaca por su absoluta simplicidad, acceso instantáneo mediante teclado y cero requerimiento de configuración previa.
                         </p>
                     </div>
                     <ul class="space-y-3 text-sm text-gray-300 dark:text-gray-300 text-gray-700 border-t border-gh-border dark:border-gh-border border-gh-lightBorder pt-4">
-                        <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-2 text-xs"></i> Integración nativa perfecta (`Win + Shift + S`)</li>
-                        <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-2 text-xs"></i> Interfaz ultraminimalista</li>
-                        <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-2 text-xs"></i> OCR básico para copiar texto</li>
-                        <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-2 text-xs"></i> Grabación rápida de vídeo en MP4</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-2 text-xs"></i> Integración instantánea (<code class="font-mono text-xs bg-black/20 px-1 rounded">Win + Shift + S</code>)</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-2 text-xs"></i> Interfaz ultraminimalista sin distracciones</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-2 text-xs"></i> OCR nativo para copiar texto al instante</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-2 text-xs"></i> Grabación de vídeo básica en MP4</li>
                     </ul>
                 </div>
             </div>
         </div>
 
-        <!-- TAB CONTENT: TABLA COMPARATIVA -->
         <div id="content-tabla" class="tab-content hidden">
             <div class="overflow-x-auto rounded-xl border border-gh-border dark:border-gh-border border-gh-lightBorder bg-gh-card dark:bg-gh-card bg-gh-lightCard shadow-sm">
                 <table class="w-full text-left text-sm">
@@ -173,7 +190,7 @@
                     </thead>
                     <tbody class="divide-y divide-gh-border dark:divide-gh-border divide-gh-lightBorder">
                         <tr class="hover:bg-white/5 transition-colors">
-                            <td class="py-4 px-6 font-medium">Tipo de Licencia</td>
+                            <td class="py-4 px-6 font-medium">Licencia y Tipo</td>
                             <td class="py-4 px-6 text-center"><span class="px-2 py-1 rounded text-xs bg-green-500/10 text-green-400 font-mono">Gratuito / Código Abierto</span></td>
                             <td class="py-4 px-6 text-center"><span class="px-2 py-1 rounded text-xs bg-blue-500/10 text-blue-400 font-mono">Nativo de Windows</span></td>
                         </tr>
@@ -194,18 +211,18 @@
                         </tr>
                         <tr class="hover:bg-white/5 transition-colors">
                             <td class="py-4 px-6 font-medium">Subida y Alojamiento Automático</td>
-                            <td class="py-4 px-6 text-center"><i class="fa-solid fa-circle-check text-green-500 text-lg"></i> <span class="text-xs text-gray-400 block mt-1">Imgur, Drive, FTP, etc.</span></td>
-                            <td class="py-4 px-6 text-center"><i class="fa-solid fa-circle-xmark text-red-500/50 text-lg"></i> <span class="text-xs text-gray-400 block mt-1">Solo guardado local</span></td>
+                            <td class="py-4 px-6 text-center"><i class="fa-solid fa-circle-check text-green-500 text-lg"></i> <span class="text-xs text-gray-400 block mt-1">Imgur, Drive, Dropbox, FTP</span></td>
+                            <td class="py-4 px-6 text-center"><i class="fa-solid fa-circle-xmark text-red-500/50 text-lg"></i> <span class="text-xs text-gray-400 block mt-1">Guardado manual</span></td>
                         </tr>
                         <tr class="hover:bg-white/5 transition-colors">
-                            <td class="py-4 px-6 font-medium">Herramientas de Edición Avanzada</td>
-                            <td class="py-4 px-6 text-center"><i class="fa-solid fa-circle-check text-green-500 text-lg"></i> <span class="text-xs text-gray-400 block mt-1">Pixelado, Lupa, Marcas de agua</span></td>
-                            <td class="py-4 px-6 text-center text-gray-400 text-xs">Básicas (Lápiz, Marcador, Borrador)</td>
+                            <td class="py-4 px-6 font-medium">Herramientas de Edición</td>
+                            <td class="py-4 px-6 text-center"><i class="fa-solid fa-circle-check text-green-500 text-lg"></i> <span class="text-xs text-gray-400 block mt-1">Pixelado, Marcas de agua, Lupa</span></td>
+                            <td class="py-4 px-6 text-center text-gray-400 text-xs">Anotaciones básicas (Lápiz, Resaltador)</td>
                         </tr>
                         <tr class="hover:bg-white/5 transition-colors">
-                            <td class="py-4 px-6 font-medium">Reconocimiento de Texto (OCR)</td>
-                            <td class="py-4 px-6 text-center"><i class="fa-solid fa-circle-check text-green-500 text-lg"></i> <span class="text-xs text-gray-400 block mt-1">Con traductor opcional</span></td>
-                            <td class="py-4 px-6 text-center"><i class="fa-solid fa-circle-check text-green-500 text-lg"></i> <span class="text-xs text-gray-400 block mt-1">Extracción rápida</span></td>
+                            <td class="py-4 px-6 font-medium">Extracción de Texto (OCR)</td>
+                            <td class="py-4 px-6 text-center"><i class="fa-solid fa-circle-check text-green-500 text-lg"></i></td>
+                            <td class="py-4 px-6 text-center"><i class="fa-solid fa-circle-check text-green-500 text-lg"></i></td>
                         </tr>
                         <tr class="hover:bg-white/5 transition-colors">
                             <td class="py-4 px-6 font-medium">Flujos de Trabajo / Automations</td>
@@ -217,7 +234,6 @@
             </div>
         </div>
 
-        <!-- TAB CONTENT: PROS Y CONTRAS -->
         <div id="content-proscons" class="tab-content hidden space-y-8">
             <div class="grid md:grid-cols-2 gap-8">
                 <!-- ShareX Detailed -->
@@ -231,20 +247,20 @@
                             <i class="fa-solid fa-thumbs-up mr-2"></i> Ventajas Destacadas
                         </h4>
                         <ul class="space-y-2 text-sm text-gray-300 dark:text-gray-300 text-gray-700">
-                            <li class="flex items-start"><i class="fa-solid fa-plus text-green-500 mt-1 mr-2 text-xs"></i><span><strong>Automatización total:</strong> Copia enlace, guarda archivo y sube a la nube en un solo clic.</span></li>
-                            <li class="flex items-start"><i class="fa-solid fa-plus text-green-500 mt-1 mr-2 text-xs"></i><span><strong>Scrolling capture:</strong> Permite tomar captura de sitios web o chats extensos de arriba a abajo.</span></li>
-                            <li class="flex items-start"><i class="fa-solid fa-plus text-green-500 mt-1 mr-2 text-xs"></i><span><strong>GIFs animados:</strong> Ideal para crear demostraciones breves de software.</span></li>
-                            <li class="flex items-start"><i class="fa-solid fa-plus text-green-500 mt-1 mr-2 text-xs"></i><span><strong>Anonimización:</strong> Herramientas para pixelar o difuminar datos sensibles rápidamente.</span></li>
+                            <li class="flex items-start"><i class="fa-solid fa-plus text-green-500 mt-1 mr-2 text-xs"></i><span><strong>Automatización avanzada:</strong> Guarda, sube a la nube y copia el enlace en el portapapeles con un solo atajo.</span></li>
+                            <li class="flex items-start"><i class="fa-solid fa-plus text-green-500 mt-1 mr-2 text-xs"></i><span><strong>Captura con desplazamiento:</strong> Captura webs o extensas ventanas de código completas.</span></li>
+                            <li class="flex items-start"><i class="fa-solid fa-plus text-green-500 mt-1 mr-2 text-xs"></i><span><strong>Soporte para GIFs:</strong> Ideal para grabar animaciones breves para demostraciones.</span></li>
+                            <li class="flex items-start"><i class="fa-solid fa-plus text-green-500 mt-1 mr-2 text-xs"></i><span><strong>Herramientas de anonimización:</strong> Pixelado rápido para ocultar contraseñas o datos personales.</span></li>
                         </ul>
                     </div>
 
                     <div class="rounded-xl border border-red-500/20 bg-red-500/5 p-6 space-y-3">
                         <h4 class="text-sm font-semibold text-red-400 uppercase tracking-wider flex items-center">
-                            <i class="fa-solid fa-thumbs-down mr-2"></i> Inconvenientes
+                            <i class="fa-solid fa-thumbs-down mr-2"></i> Desventajas
                         </h4>
                         <ul class="space-y-2 text-sm text-gray-300 dark:text-gray-300 text-gray-700">
-                            <li class="flex items-start"><i class="fa-solid fa-minus text-red-400 mt-1 mr-2 text-xs"></i><span><strong>Interfaz abrumadora:</strong> Decenas de menús y opciones que requieren tiempo de adaptación.</span></li>
-                            <li class="flex items-start"><i class="fa-solid fa-minus text-red-400 mt-1 mr-2 text-xs"></i><span><strong>Exclusivo de Windows:</strong> No disponible en macOS ni Linux.</span></li>
+                            <li class="flex items-start"><i class="fa-solid fa-minus text-red-400 mt-1 mr-2 text-xs"></i><span><strong>Curva de aprendizaje elevada:</strong> Interfaz con multitud de menús y configuraciones.</span></li>
+                            <li class="flex items-start"><i class="fa-solid fa-minus text-red-400 mt-1 mr-2 text-xs"></i><span><strong>Configuración inicial:</strong> Requiere enlazar servicios externos para exprimir su potencial.</span></li>
                         </ul>
                     </div>
                 </div>
@@ -260,52 +276,51 @@
                             <i class="fa-solid fa-thumbs-up mr-2"></i> Ventajas Destacadas
                         </h4>
                         <ul class="space-y-2 text-sm text-gray-300 dark:text-gray-300 text-gray-700">
-                            <li class="flex items-start"><i class="fa-solid fa-plus text-green-500 mt-1 mr-2 text-xs"></i><span><strong>Cero configuración:</strong> Integrada de fábrica en el SO, lista con <code class="px-1.5 py-0.5 rounded bg-black/20 text-xs font-mono">Win + Shift + S</code>.</span></li>
-                            <li class="flex items-start"><i class="fa-solid fa-plus text-green-500 mt-1 mr-2 text-xs"></i><span><strong>Simplicidad:</strong> Interfaz limpia orientada a no distraer.</span></li>
-                            <li class="flex items-start"><i class="fa-solid fa-plus text-green-500 mt-1 mr-2 text-xs"></i><span><strong>OCR nativo:</strong> Reconocimiento de texto rápido y eficiente para copiar fragmentos.</span></li>
+                            <li class="flex items-start"><i class="fa-solid fa-plus text-green-500 mt-1 mr-2 text-xs"></i><span><strong>Cero instalaciones:</strong> Disponible de forma nativa e inmediata en Windows.</span></li>
+                            <li class="flex items-start"><i class="fa-solid fa-plus text-green-500 mt-1 mr-2 text-xs"></i><span><strong>Simplicidad extrema:</strong> Interfaz limpia sin distracciones ni configuraciones.</span></li>
+                            <li class="flex items-start"><i class="fa-solid fa-plus text-green-500 mt-1 mr-2 text-xs"></i><span><strong>Extracción de texto (OCR):</strong> Copia texto directo de imágenes fácilmente.</span></li>
                         </ul>
                     </div>
 
                     <div class="rounded-xl border border-red-500/20 bg-red-500/5 p-6 space-y-3">
                         <h4 class="text-sm font-semibold text-red-400 uppercase tracking-wider flex items-center">
-                            <i class="fa-solid fa-thumbs-down mr-2"></i> Inconvenientes
+                            <i class="fa-solid fa-thumbs-down mr-2"></i> Desventajas
                         </h4>
                         <ul class="space-y-2 text-sm text-gray-300 dark:text-gray-300 text-gray-700">
-                            <li class="flex items-start"><i class="fa-solid fa-minus text-red-400 mt-1 mr-2 text-xs"></i><span><strong>Funcionalidades limitadas:</strong> Sin captura con scroll ni exportación a GIF.</span></li>
-                            <li class="flex items-start"><i class="fa-solid fa-minus text-red-400 mt-1 mr-2 text-xs"></i><span><strong>Sin automatizaciones:</strong> Exige guardar o subir archivos manualmente.</span></li>
+                            <li class="flex items-start"><i class="fa-solid fa-minus text-red-400 mt-1 mr-2 text-xs"></i><span><strong>Sin captura de desplazamiento:</strong> No permite capturar páginas largas completas.</span></li>
+                            <li class="flex items-start"><i class="fa-solid fa-minus text-red-400 mt-1 mr-2 text-xs"></i><span><strong>Sin automatizaciones:</strong> Subida y guardado completamente manuales.</span></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Verdict Section -->
         <section id="conclusion" class="mt-20 pt-12 border-t border-gh-border dark:border-gh-border border-gh-lightBorder">
-            <div class="rounded-2xl border border-gh-border dark:border-gh-border border-gh-lightBorder bg-gradient-to-b dark:from-gh-card dark:to-gh-bg from-white to-gray-50 p-8 sm:p-10">
+            <div class="rounded-2xl border border-gh-border dark:border-gh-border border-gh-lightBorder bg-gradient-to-b dark:from-gh-card dark:to-gh-bg from-gray-50 to-white p-8 sm:p-10">
                 <div class="max-w-3xl mx-auto text-center space-y-6">
                     <h2 class="text-2xl sm:text-3xl font-bold text-gh-heading dark:text-gh-heading text-gh-lightHeading">
-                        Veredicto: ¿Cuál deberías elegir?
+                        Veredicto y Recomendación
                     </h2>
                     <p class="text-gray-400 text-sm sm:text-base leading-relaxed">
-                        Ambas herramientas son excelentes en su categoría, pero están dirigidas a perfiles de usuario completamente distintos:
+                        Selecciona la herramienta adecuada según tu perfil y necesidades diarias:
                     </p>
 
                     <div class="grid sm:grid-cols-2 gap-6 text-left pt-4">
                         <div class="p-5 rounded-xl border border-gh-border dark:border-gh-border border-gh-lightBorder bg-gh-bg/50 dark:bg-gh-bg/50 bg-white">
                             <h3 class="font-bold text-gh-heading dark:text-gh-heading text-gh-lightHeading mb-2 flex items-center">
-                                <i class="fa-solid fa-user-check text-purple-400 mr-2"></i> Elige Recortes si:
+                                <i class="fa-solid fa-user-check text-purple-400 mr-2"></i> Herramienta Recortes:
                             </h3>
                             <p class="text-xs sm:text-sm text-gray-400 leading-relaxed">
-                                Solo necesitas hacer recortes ocasionales, enviar imágenes rápidas por chat o e-mail, y prefieres una herramienta limpia sin configuraciones complejas.
+                                Ideal para recortes esporádicos, anotaciones rápidas e intromisión mínima en el sistema operativo.
                             </p>
                         </div>
 
                         <div class="p-5 rounded-xl border border-gh-border dark:border-gh-border border-gh-lightBorder bg-gh-bg/50 dark:bg-gh-bg/50 bg-white">
                             <h3 class="font-bold text-gh-heading dark:text-gh-heading text-gh-lightHeading mb-2 flex items-center">
-                                <i class="fa-solid fa-user-gear text-blue-400 mr-2"></i> Elige ShareX si:
+                                <i class="fa-solid fa-user-gear text-blue-400 mr-2"></i> ShareX:
                             </h3>
                             <p class="text-xs sm:text-sm text-gray-400 leading-relaxed">
-                                Creas documentación técnica, tutoriales o trabajas diariamente recortando, grabando GIFs, editando datos confidenciales y subiendo imágenes a la nube.
+                                Indispensable para desarrolladores, creadores de contenido o técnicos que buscan máxima productividad y automatización.
                             </p>
                         </div>
                     </div>
@@ -315,19 +330,17 @@
 
     </main>
 
-    <!-- Footer -->
     <footer class="border-t border-gh-border dark:border-gh-border border-gh-lightBorder py-8 bg-gh-bg dark:bg-gh-bg bg-gh-lightBg text-center text-xs text-gray-500">
         <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p>Documentación técnica de comparación de herramientas de escritorio.</p>
+            <p>Elaborado por Alfredo Rivadulla, Iker Ronda y Rodrigo Acosta.</p>
             <div class="flex space-x-4">
                 <a href="https://getsharex.com/" target="_blank" rel="noopener noreferrer" class="hover:text-blue-400 transition-colors">
-                    <i class="fa-solid fa-arrow-up-right-from-square mr-1"></i> Web de ShareX
+                    <i class="fa-solid fa-arrow-up-right-from-square mr-1"></i> Sitio oficial ShareX
                 </a>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript for Theme Toggle & Tabs -->
     <script>
         // Theme Toggle Logic
         const themeToggleBtn = document.getElementById('themeToggle');
